@@ -1,0 +1,28 @@
+<!-- Page 5: 未來 -->
+<div id="future" class="content">
+    <img src="./04.jpg" class="lobster-img" alt="未來的龍蝦">
+    <h1>未來展望：AI 治理與共生</h1>
+    <p>未來企業將不僅僅是使用 AI 模型，而是管理一整群的「龍蝦代理」。</p>
+    <p>重點將從「AI 會不會說錯話」轉向「AI 會不會做錯事」，建立安全的代理平台（如 NVIDIA NemoClaw）將是關鍵。</p>
+</div>
+
+<footer>
+    © 2026 AI Lobster Agent Revolution | 參考資料來源：明怡基金會、資安署
+</footer>
+
+<script>
+    function showPage(pageId) {
+        // 隱藏所有頁面
+        const pages = document.querySelectorAll('.content');
+        pages.forEach(page => page.classList.remove('active'));
+        
+        // 顯示點選的頁面
+        document.getElementById(pageId).classList.add('active');
+        
+        // 捲動回頂部
+        window.scrollTo(0, 0);
+    }
+</script>
+
+</body>
+</html>

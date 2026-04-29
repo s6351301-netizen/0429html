@@ -2,48 +2,40 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>語意化標籤範例</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 龍蝦代理革命 - OpenClaw 專題網頁</title>
+    <style>
+        :root { --lobster-red: #E63946; --ocean-blue: #1D3557; --sand: #F1FAEE; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--sand); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        
+        /* 導覽列 */
+        nav { background: var(--ocean-blue); padding: 1rem; position: sticky; top: 0; z-index: 1000; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; margin: 0; }
+        nav a { color: white; text-decoration: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        nav a:hover { color: var(--lobster-red); }
+
+        /* 內容區塊 */
+        .content { flex: 1; padding: 40px; max-width: 900px; margin: 0 auto; display: none; animation: fadeIn 0.5s; }
+        .active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* 元素樣式 */
+        .lobster-img { width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); margin: 20px 0; }
+        h1 { color: var(--lobster-red); border-left: 5px solid var(--ocean-blue); padding-left: 15px; }
+        .card { background: white; padding: 20px; border-radius: 10px; margin: 10px 0; border-bottom: 4px solid var(--lobster-red); }
+        footer { text-align: center; padding: 20px; background: #eee; font-size: 0.8rem; }
+    </style>
 </head>
 <body>
-
-    <!-- 頁首：放置 Logo 或導覽選單 -->
-    <header>
-        <h1>我的網站標題</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我們</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- 主要內容區 -->
-    <main>
-        <!-- 獨立的文章內容 -->
-        <article>
-            <h2>HTML5 語意化的重要性</h2>
-            <p>使用語意標籤能讓搜尋引擎（SEO）更了解網頁結構。</p>
-            
-            <!-- 文章內的具體章節 -->
-            <section>
-                <h3>1. 提升可讀性</h3>
-                <p>開發者能快速辨識區塊功能。</p>
-            </section>
-        </article>
-
-        <!-- 側邊欄：補充資訊 -->
-        <aside>
-            <h3>熱門文章</h3>
-            <ul>
-                <li>學習 CSS 的 5 個技巧</li>
-            </ul>
-        </aside>
-    </main>
-
-    <!-- 頁尾：版權宣告與聯絡資訊 -->
-    <footer>
-        <p>&copy; 2024 網頁開發教學</p>
-    </footer>
-
-</body>
-</html>
+<img src="./05.jpg" class="lobster-img" alt="龍蝦代理的封面圖">
+    <h1 style="text-align: center; color: var(--ocean-blue);">AI 龍蝦代理革命</h1>
+    <p style="text-align: center; font-size: 1.2rem; color: var(--ocean-blue);">從 LLM 到 Agentic AI 的未來趨勢與挑戰</p>
+<nav>
+    <ul>
+        <li><a onclick="showPage('home')">首頁：龍蝦降臨</a></li>
+        <li><a onclick="showPage('tech')">核心技術</a></li>
+        <li><a onclick="showPage('apply')">應用場景</a></li>
+        <li><a onclick="showPage('risk')">風險警示</a></li>
+        <li><a onclick="showPage('future')">未來展望</a></li>
+    </ul>
+</nav>
